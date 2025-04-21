@@ -9,15 +9,30 @@ import { fileURLToPath } from 'url';
 import { allowInsecurePrototypeAccess} from "@handlebars/allow-prototype-access";
 import session from "express-session";
 import flash from "connect-flash"
-//import passport from "passport"
-//import auth from "./config/auth.js";
-//auth(passport)
+import passport from "passport"
+import auth from "./config/auth.js";
+auth(passport)
 
 ///////////////////////////////
 //CONFIGURAÇÕES
 ///////////////////////////////
 const PORTA = 3000
+app.use(session({
+    secret: "iambatman",
+    resave: true,
+    saveUninitialized: true,
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(flash());
 
+app.use(function (req, res, next) {
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.error_msg = req.flash('error_msg')
+    res.locals.error = req.flash('error')
+    res.locals.usuario = req.user || null
+    next()
+});
 
 //Template Engine
 app.engine('handlebars', handlebars.engine({
@@ -45,7 +60,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.render('principal/index')
+    res.redirect('/principal');
 })
+
+import usuario from './routes/usuario.js'
+app.use('/usuario', usuario)
+
+import principal from './routes/principal.js'
+app.use('/principal', principal)
 
 app.listen(PORTA, () => console.log("Servidor iniciado em http://localhost:"+PORTA))

@@ -12,13 +12,10 @@
 </head>
 <body>
     <div class="container-fluid p-0 m-0">
-        {{>nav-principal}}
-        {{>menu-lateral}}
-        <main class="main-content">
-            <div class="container-fluid bg-danger">
-                {{>msg}}
-                {{{body}}}
-            </div>
+        {{>nav-externa}}
+        <main class="container-fluid">
+            {{>msg}}
+            {{{body}}}
         </main>
     </div>
     <script src="/js/bootstrap.bundle.js"></script>

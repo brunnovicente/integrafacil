@@ -1,0 +1,23 @@
+<div class="col-md-6 p-2 shadow mx-auto">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Cadastro de Usuário</span>
+            <a class="btn btn-secondary" href="#"><i class="fa-solid fa-angle-left"> </i> Voltar</a>
+        </div>
+    </nav>
+    <form action="/usuario/cadastrar" method="post">
+        <label>NOME DE USUÁRIO</label>
+        <input type="text" name="username" class="form-control">
+
+        <label>SENHA</label>
+        <input type="text" name="password" class="form-control">
+
+        <label>E-MAIL</label>
+        <input type="text" name="email" class="form-control">
+
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success mt-3">SALVAR</button>
+        </div>
+
+    </form>
+</div>
