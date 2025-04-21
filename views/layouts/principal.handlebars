@@ -9,17 +9,27 @@
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="/css/all.css" type="text/css">
     <link rel="stylesheet" href="/css/sidebar.css" type="text/css">
+    <link rel="stylesheet" href="/css/padrao.css" type="text/css">
 </head>
 <body>
     <div class="container-fluid p-0 m-0">
         {{>nav-principal}}
-        {{>menu-lateral}}
-        <main class="main-content">
-            <div class="container-fluid bg-danger">
-                {{>msg}}
-                {{{body}}}
+        <div class="container-fluid">
+            <div class="row flex-nowrap" >
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2" style="background-color: #D3D3D3;">
+                    {{>menu-lateral}}
+                </div>
+                <div class="col py-3">
+                    <h3>Left Sidebar with Submenus</h3>
+                    <p class="lead">
+                        An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single
+                        menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.</p>
+                    <ul class="list-unstyled">
+                        <li><h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile</li>
+                    </ul>
+                </div>
             </div>
-        </main>
+        </div>
     </div>
     <script src="/js/bootstrap.bundle.js"></script>
 </body>

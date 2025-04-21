@@ -1,52 +1,61 @@
-<div class="d-flex">
-    <nav class="sidebar d-flex flex-column flex-shrink-0 position-fixed">
-        <button class="toggle-btn" onclick="toggleSidebar()">
-            <i class="fas fa-chevron-left"></i>
-        </button>
+<div class="m-0 p-0" style="height:calc(100vh - 54px);">
 
-        <div class="p-4">
-            <h4 class="logo-text fw-bold mb-0 text-white">Bruno Vicente</h4>
-            <p class="text-white small hide-on-collapse">Dashboard</p>
-        </div>
+    <div class="p-3">
+        <img src="/img/semfoto.png" class="w-50 d-block mx-auto rounded-circle">
+        <h5 class="text-center">{{usuario.username}}</h5>
+    </div>
+    <hr>
+    <div class="p-2">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#" class="nav-link w-100 text-success destaque">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </li>
 
-        <div class="nav flex-column">
-            <a href="/" class="sidebar-link text-decoration-none p-3">
-                <i class="fas fa-home me-3"></i>
-                <span class="hide-on-collapse">Início</span>
-            </a>
-            <a href="#" class="sidebar-link text-decoration-none p-3">
-                <i class="fas fa-chart-bar me-3"></i>
-                <span class="hide-on-collapse">Pacientes</span>
-            </a>
-            <a href="#" class="sidebar-link text-decoration-none p-3">
-                <i class="fas fa-users me-3"></i>
-                <span class="hide-on-collapse">Profissionais</span>
-            </a>
+            <li class="nav-item">
+                <a href="#" class="nav-link w-100 text-success destaque">
+                    <i class="fa-solid fa-users"></i> Pacientes
+                </a>
+            </li>
 
-            <a href="#" class="sidebar-link text-decoration-none p-3">
-                <i class="fas fa-box me-3"></i>
-                <span class="hide-on-collapse">Agendamentos</span>
-            </a>
-            <a href="#" class="sidebar-link text-decoration-none p-3">
-                <i class="fas fa-gear me-3"></i>
-                <span class="hide-on-collapse">Procedimentos</span>
-            </a>
-        </div>
+            <li class="nav-item">
+                <a href="#" class="nav-link w-100 text-success destaque">
+                    <i class="fa-solid fa-book-medical"></i> Procedimentos
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-<!--        <div class="profile-section mt-auto p-4">-->
-<!--            <div class="d-flex align-items-center">-->
-<!--                <img src="https://randomuser.me/api/portraits/women/70.jpg" style="height:60px" class="rounded-circle" alt="Profile">-->
-<!--                <div class="ms-3 profile-info">-->
-<!--                    <h6 class="text-white mb-0">Alex Morgan</h6>-->
-<!--                    <small class="text-muted">Admin</small>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    </nav>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('collapsed');
-        }
-    </script>
+<!--<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2" style="height: calc(100vh - 54px)">-->
+<!--    <div class="p-3">-->
+<!--        <img src="/img/semfoto.png" class="w-50 d-block mx-auto rounded-circle">-->
+<!--        <h5 class="text-center">{{usuario.username}}</h5>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">-->
+<!--        <li class="nav-item border-bottom d-block">-->
+<!--            <a href="#" class="nav-link align-middle px-0 d-block">-->
+<!--                <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>-->
+<!--            </a>-->
+<!--        </li>-->
+
+<!--&lt;!&ndash;        <li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">&ndash;&gt;-->
+<!--&lt;!&ndash;                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="w-100">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+
+
+<!--    </ul>-->
+<!--    <hr>-->
+<!--</div>-->

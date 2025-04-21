@@ -1,0 +1,8 @@
+.destaque{
+
+}
+
+.destaque:hover{
+    background-color: #DCDCDC;
+    font-weight: bolder;
+}
