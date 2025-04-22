@@ -69,4 +69,7 @@ app.use('/usuario', usuario)
 import principal from './routes/principal.js'
 app.use('/principal', principal)
 
+import procedimento from './routes/procedimento.js'
+app.use('/procedimento', procedimento)
+
 app.listen(PORTA, () => console.log("Servidor iniciado em http://localhost:"+PORTA))

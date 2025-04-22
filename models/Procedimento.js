@@ -22,4 +22,4 @@ const Procedimento = banco.sequelize.define('procedimentos', {
 
 })
 
-export default Procedimento;
+export default Procedimento
